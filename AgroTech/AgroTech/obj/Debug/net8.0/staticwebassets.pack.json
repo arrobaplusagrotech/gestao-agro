@@ -1,0 +1,125 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AgroTech.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AgroTech.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\agro-tech-fonts\\Montserrat-Black.ttf",
+      "PackagePath": "staticwebassets\\agro-tech-fonts\\Montserrat-Black.ttf"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\agro-tech-fonts\\Montserrat-Light.ttf",
+      "PackagePath": "staticwebassets\\agro-tech-fonts\\Montserrat-Light.ttf"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\agro-tech-fonts\\Montserrat-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\agro-tech-fonts\\Montserrat-SemiBold.ttf"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\agro-tech-fonts\\OFL.txt",
+      "PackagePath": "staticwebassets\\agro-tech-fonts\\OFL.txt"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\agro-tech-fonts\\README.txt",
+      "PackagePath": "staticwebassets\\agro-tech-fonts\\README.txt"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\background.png",
+      "PackagePath": "staticwebassets\\images\\background.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\New Text Document.txt",
+      "PackagePath": "staticwebassets\\images\\icons\\New Text Document.txt"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\balance-64.png",
+      "PackagePath": "staticwebassets\\images\\icons\\balance-64.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\balance.png",
+      "PackagePath": "staticwebassets\\images\\icons\\balance.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\cow-64.png",
+      "PackagePath": "staticwebassets\\images\\icons\\cow-64.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\dashboard-icon-bold.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\dashboard-icon-bold.svg"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\dashboard-icon.png",
+      "PackagePath": "staticwebassets\\images\\icons\\dashboard-icon.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\dashboard-icon.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\dashboard-icon.svg"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\icon_google.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\icon_google.svg"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\measuring-tape-64.png",
+      "PackagePath": "staticwebassets\\images\\icons\\measuring-tape-64.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\measuring-tape.png",
+      "PackagePath": "staticwebassets\\images\\icons\\measuring-tape.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\menu-hamburguer-icon.png",
+      "PackagePath": "staticwebassets\\images\\icons\\menu-hamburguer-icon.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\people-dashboard-64.png",
+      "PackagePath": "staticwebassets\\images\\icons\\people-dashboard-64.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\icons\\people-dashboard.png",
+      "PackagePath": "staticwebassets\\images\\icons\\people-dashboard.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\logo-color.png",
+      "PackagePath": "staticwebassets\\images\\logo-color.png"
+    },
+    {
+      "Id": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgroTech.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AgroTech.props",
+      "PackagePath": "build\\AgroTech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AgroTech.props",
+      "PackagePath": "buildMultiTargeting\\AgroTech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AgroTech.props",
+      "PackagePath": "buildTransitive\\AgroTech.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,81 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        background-image: url("/images/background.png");
+        background-color: #302F2F;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 383px;
+        height: 414px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.00);
+        background: rgba(255, 255, 255, 0.00);
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(25px);
+    }
+</style>
+
+<PageTitle>Home</PageTitle>
+
+<main class="container-sm d-flex align-items-center justify-content-center">
+    <EditForm EditContext="editContext" class="flex-column gap-3 p-2">
+        <div class="container-img align-self-center">
+            <img src="/images/logo-color.png">
+        </div>
+        <div>
+            <label class="fw-bold text-secondary form-label" for="address-email">Endereço de email</label>
+            <InputText id="address-email" class="fw-bold text-secondary bg-transparent border border-secondary
+            form-control" @bind-Value="account.Email" />
+
+        </div>
+        <div>
+            <label class="fw-bold text-secondary form-label" for="password">Senha de acesso</label>
+            <InputText id="password" type="password" class="fw-bold text-secondary bg-transparent border border-secondary
+            form-control" @bind-Value="account.Passwordd" />
+
+        </div>
+        <div>
+            <button class="btn text-light" @onclick="@(SignIn)">Entrar</button>
+        </div>
+    </EditForm>
+</main>
+
+
+@code {
+    class Account()
+    {
+        public string? Email { get; set; }
+        public string? Passwordd { get; set; }
+
+    }
+
+    EditContext? editContext;
+    Account? account;
+
+    protected override void OnInitialized()
+    {
+        account = new Account();
+        editContext = new EditContext(account);
+
+
+        base.OnInitialized();
+    }
+
+    void SignIn()
+    {
+        Navigation.NavigateTo("/painel-de-controle");
+    }
+
+}

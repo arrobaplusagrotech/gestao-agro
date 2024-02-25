@@ -1,0 +1,37 @@
+﻿
+<div>
+    <span class="title">@Title</span>
+    <div class="info-card">
+        <div class="container-icon">
+            <img width="30" src="@PathIcon" />
+        </div>
+        <div class="container-value">
+            <span>@_formateedValue</span>
+
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+    [Parameter]
+    public string PathIcon { get; set; } = string.Empty;
+    [Parameter]
+    public object? Value { get; set; }
+
+    private string FormatValue(object? value)
+    {
+        if (value is int intValue)
+        {
+            return intValue.ToString("#,##0").Replace(',', '.');
+        }
+        else if (value is decimal decimalValue)
+        {
+            return decimalValue.ToString("#,##0.00").Replace(',', '.');
+        }
+        return "";
+
+    }
+
+    private string _formateedValue => FormatValue(Value);
+}

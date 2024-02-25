@@ -1,0 +1,52 @@
+﻿.title {
+    font-family: montserrat-light;
+    font-size: 1rem;
+    color: #271447;
+}
+
+.card {
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 5px 4px #888888;
+}
+
+.card-body {
+    background-color: transparent;
+    border: none;
+    padding-bottom: 0;
+}
+
+table {
+    margin: 0;
+}
+
+th {
+    color: #271447;
+}
+
+thead {
+    font-family: montserrat-semibold;
+}
+
+thead {
+    border-bottom: 2px solid #72257F;
+}
+
+tr {
+    border-bottom: 1px solid #72257F;
+    color: #271447;
+}
+
+tbody tr:last-child {
+    border: 1px solid #D9D9D9;
+}
+
+tr td:nth-child(2) {
+    font-family: montserrat-semibold;
+}
+
+.info-title {
+    font-size: 1rem;
+    text-align: center;
+}

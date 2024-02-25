@@ -1,0 +1,31 @@
+.title[b-2ga2vng516] {
+    font-family: montserrat-light;
+    font-size: 1rem;
+    color: #271447;
+}
+.info-card[b-2ga2vng516] {
+    display: flex;
+    align-items:center;
+    height: 72px;
+    padding: 8px 0;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    border-radius: 8px;
+}
+
+.container-icon[b-2ga2vng516] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 100%;
+    border-right: 2px solid #71247E;
+    padding: 0 18px;
+}
+
+.container-value[b-2ga2vng516] {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: montserrat-semibold;
+}

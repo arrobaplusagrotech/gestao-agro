@@ -1,0 +1,15 @@
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\bin\Debug\net8.0\AgroTech.BusinessLogicLayer.deps.json
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\bin\Debug\net8.0\AgroTech.BusinessLogicLayer.dll
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\bin\Debug\net8.0\AgroTech.BusinessLogicLayer.pdb
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\bin\Debug\net8.0\AgroTech.DataAccessLayer.dll
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\bin\Debug\net8.0\AgroTech.DataAccessLayer.pdb
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.AssemblyInfo.cs
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.csproj.CopyComplete
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.dll
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\refint\AgroTech.BusinessLogicLayer.dll
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\AgroTech.BusinessLogicLayer.pdb
+D:\WorkSpace\AgroTech\AgroTech.BusinessLogicLayer\obj\Debug\net8.0\ref\AgroTech.BusinessLogicLayer.dll

@@ -1,0 +1,94 @@
+﻿<span class="title">@Title</span>
+<div class="card">
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2" class="text-center">
+                       @InfoTitle
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-start">Macho:</td>
+                    <td class="text-end">@_formattedActivesMales</td>
+                </tr>
+                <tr>
+                    <td class="text-start">Fêmea:</td>
+                    <td class="text-end">@_formattedActivesFemales</td>
+                </tr>
+                <tr>
+                    <td class="text-start">Total:</td>
+                    <td class="text-end">@_formattedActives</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2" class="text-center">
+                        Inativos
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-start">Macho:</td>
+                    <td class="text-end">@_formattedInactivesMales</td>
+                </tr>
+                <tr>
+                    <td class="text-start">Fêmea:</td>
+                    <td class="text-end">@_formattedInactivesFemales</td>
+                </tr>
+                <tr>
+                    <td class="text-start">Total:</td>
+                    <td class="text-end">@_formattedInactives</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+    [Parameter]
+    public string InfoTitle { get; set; } = string.Empty;
+    [Parameter]
+    public object? ActivesMales { get; set; }
+    [Parameter]
+    public object? ActivesFemales { get; set; }
+    [Parameter]
+    public object? Actives { get; set; }
+    [Parameter]
+    public object? InactivesMales { get; set; }
+    [Parameter]
+    public object? InactivesFemales { get; set; }
+    [Parameter]
+    public object? Inactives { get; set; }
+
+    private string FormatValue(object? value)
+    {
+        if (value is int intValue)
+        {
+            return intValue.ToString("#,##0").Replace(',', '.');
+        }
+        else if  (value is decimal decimalValue)
+        {
+            return decimalValue.ToString("#,##0.00").Replace(',', '.');
+        }
+        return "";
+
+    }
+
+    private string _formattedActivesMales => FormatValue(ActivesMales);
+    private string _formattedActivesFemales => FormatValue(ActivesFemales);
+    private string _formattedActives => FormatValue(Actives);
+    private string _formattedInactivesMales => FormatValue(InactivesMales);
+    private string _formattedInactivesFemales => FormatValue(InactivesFemales);
+    private string _formattedInactives => FormatValue(Inactives);
+
+
+}

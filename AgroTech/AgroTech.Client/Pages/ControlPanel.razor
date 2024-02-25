@@ -1,0 +1,310 @@
+﻿@page "/painel-de-controle"
+@attribute [StreamRendering]
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+
+<PageTitle>Painel de controle</PageTitle>
+<div class="container">
+    <TitleLayout Title="Painel de controle"></TitleLayout>
+    <div class="row mt-3">
+        <div class="col-md-6 col-lg-4">
+            <InfoCard Title="Clientes" PathIcon="\images\icons\people-dashboard-64.png" Value="@globalFarmDataReporter.TotalClients"></InfoCard>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 col-lg-4">
+            <Select @onchange=@(OnChangeClient)
+                    style="
+                            height: 42px;
+                            border: 1px solid #5B1D65;
+                            border-radius: 4px;">
+                <option value="" selected>Filtrar Fazenda</option>
+                @foreach (var client in globalFarmDataReporter.Clients)
+                {
+                    <option value="@client.Id">@client.CustomName</option>
+                }
+            </Select>
+        </div>
+        <div class="row mt-3 justify-content-between">
+            <div class="col-md-6 col-lg-4 mb-sm-5">
+                <InfoCard Title="Animais" PathIcon="\images\icons\cow-64.png" Value="@totalActiveAnimals"></InfoCard>
+                <div class="row mt-3">
+                    <div class="col-lg-12">
+                        <SummaryCard InfoTitle="Animais"
+                                     ActivesMales="@totalActiveMaleAnimals"
+                                     ActivesFemales="@totalActiveFemaleAnimals"
+                                     Actives="@totalActiveAnimals"
+                                     InactivesMales="@totalInactiveMaleAnimals"
+                                     InactivesFemales="@totalInactiveFemaleAnimals"
+                                     Inactives="@totalInactiveAnimals">
+                        </SummaryCard>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-md-5 mb-sm-5">
+                <InfoCard Title="Peso Médio" PathIcon="\images\icons\balance-64.png" Value="@mediumWeightActiveAnimals"></InfoCard>
+                <div class="row mt-3">
+                    <div class="col-lg-12">
+                        <SummaryCard InfoTitle="Peso Médio"
+                                     ActivesMales="mediumWeightActiveMaleAnimals"
+                                     ActivesFemales="mediumWeightActiveFemaleAnimals"
+                                     Actives="mediumWeightActiveAnimals"
+                                     InactivesMales="mediumWeightInactiveMaleAnimals"
+                                     InactivesFemales="mediumWeightInactiveFemaleAnimals"
+                                     Inactives="mediumWeightInactiveAnimals">
+                        </SummaryCard>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <InfoCard Title="GPD" PathIcon="\images\icons\measuring-tape-64.png" Value="@GPDActiveAnimals"></InfoCard>
+                <div class="row mt-3">
+                    <div class="col-lg-12">
+                        <SummaryCard InfoTitle="GPD Médio"
+                                     ActivesMales="@GPDActiveMaleAnimals"
+                                     ActivesFemales="@GPDActiveFemaleAnimals"
+                                     Actives="@GPDActiveAnimals"
+                                     InactivesMales="@GPDInactiveMaleAnimals"
+                                     InactivesFemales="@GPDInactiveFemaleAnimals"
+                                     Inactives="@GPDInactiveAnimals">
+                        </SummaryCard>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            @* <ChartBarFarmAnimalsInfo dbFarmName="@dataBaseSelected"></ChartBarFarmAnimalsInfo> *@
+        </div>
+    </div>
+</div>
+
+@code {
+    GlobalFarmDataReporter globalFarmDataReporter = new();
+    #region Total Animals
+    int totalActiveFemaleAnimals, totalActiveMaleAnimals = 0;
+    int totalInactiveFemaleAnimals, totalInactiveMaleAnimals = 0;
+    int totalActiveAnimals, totalInactiveAnimals = 0;
+    #endregion
+
+    #region Avarage Weight
+    decimal mediumWeightActiveFemaleAnimals, mediumWeightActiveMaleAnimals = 0;
+    decimal mediumWeightInactiveFemaleAnimals, mediumWeightInactiveMaleAnimals = 0;
+    decimal mediumWeightActiveAnimals, mediumWeightInactiveAnimals = 0;
+    #endregion
+
+    #region GPD
+    decimal GPDActiveFemaleAnimals, GPDActiveMaleAnimals = 0;
+    decimal GPDInactiveFemaleAnimals, GPDInactiveMaleAnimals = 0;
+    decimal GPDActiveAnimals, GPDInactiveAnimals = 0;
+    #endregion
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpResponseMessage result = new();
+        try
+        {
+            result = await _controlPanelService.Get();
+        }
+        catch (Exception)
+        {
+
+        }
+
+        if (result.IsSuccessStatusCode)
+        {
+            globalFarmDataReporter = await result.Content.ReadFromJsonAsync<GlobalFarmDataReporter>() ?? new();
+            AnimalTotalHandler();
+            AvarangeAnimalWeightHandler();
+            DailyWeightGain();
+        }
+    }
+
+    void OnChangeClient(ChangeEventArgs args)
+    {
+        var clientId = args.Value?.ToString();
+        AnimalTotalHandler(clientId);
+        AvarangeAnimalWeightHandler(clientId);
+        DailyWeightGain(clientId);
+    }
+
+    void AnimalTotalHandler(string? clientId = null)
+    {
+        if (string.IsNullOrEmpty(clientId))
+        {
+            totalActiveFemaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalActiveFemaleAnimals);
+            totalActiveMaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalActiveMaleAnimals);
+            totalInactiveFemaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalInactiveFemaleAnimals);
+            totalInactiveMaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalInactiveMaleAnimals);
+            totalActiveAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalActiveAnimals);
+            totalInactiveAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalInactiveAnimals);
+        }
+        else
+        {
+            var farmDataReporter = globalFarmDataReporter.Clients.First(x => x.Id.ToString() == clientId);
+
+            totalActiveFemaleAnimals = farmDataReporter.TotalActiveFemaleAnimals;
+            totalActiveMaleAnimals = farmDataReporter.TotalActiveMaleAnimals;
+            totalInactiveFemaleAnimals = farmDataReporter.TotalInactiveFemaleAnimals;
+            totalInactiveMaleAnimals = farmDataReporter.TotalInactiveMaleAnimals;
+            totalActiveAnimals = farmDataReporter.TotalActiveAnimals;
+            totalInactiveAnimals = farmDataReporter.TotalInactiveAnimals;
+        }
+    }
+
+    void AvarangeAnimalWeightHandler(string? clientId = null)
+    {
+        if (string.IsNullOrEmpty(clientId))
+        {
+
+            var totalWeightActiveFemaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightActiveFemaleAnimals);
+
+            var totalWeightActiveMaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightActiveMaleAnimals);
+
+            var totalWeightInactiveFemaleAnimals = globalFarmDataReporter.Clients
+           .Sum(x => x.TotalWeightInactiveFemaleAnimals);
+
+            var totalWeightInactiveMaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightInactiveMaleAnimals);
+
+            var totalWeightActiveAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightActiveAnimals);
+
+            var totalWeightInactiveAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightInactiveAnimals);
+
+
+            mediumWeightActiveFemaleAnimals = totalActiveFemaleAnimals != 0 ? totalWeightActiveFemaleAnimals / totalActiveFemaleAnimals : 0;
+            mediumWeightActiveMaleAnimals = totalActiveMaleAnimals != 0 ? totalWeightActiveMaleAnimals / totalActiveMaleAnimals : 0;
+            mediumWeightInactiveFemaleAnimals = totalInactiveFemaleAnimals != 0 ? totalWeightInactiveFemaleAnimals / totalInactiveFemaleAnimals : 0;
+            mediumWeightInactiveMaleAnimals = totalInactiveMaleAnimals != 0 ? totalWeightInactiveMaleAnimals / totalInactiveMaleAnimals : 0;
+            mediumWeightActiveAnimals = totalActiveAnimals != 0 ? totalWeightActiveAnimals / totalActiveAnimals : 0;
+            mediumWeightInactiveAnimals = totalInactiveAnimals != 0 ? totalWeightInactiveAnimals / totalInactiveAnimals : 0;
+        }
+        else
+        {
+            var farmDataReporter = globalFarmDataReporter.Clients.First(x => x.Id.ToString() == clientId);
+
+            mediumWeightActiveFemaleAnimals = totalActiveFemaleAnimals != 0 ? farmDataReporter.TotalWeightActiveFemaleAnimals / totalActiveFemaleAnimals : 0;
+            mediumWeightActiveMaleAnimals = totalActiveMaleAnimals != 0 ? farmDataReporter.TotalWeightActiveMaleAnimals / totalActiveMaleAnimals : 0;
+            mediumWeightInactiveFemaleAnimals = totalInactiveFemaleAnimals != 0 ? farmDataReporter.TotalWeightInactiveFemaleAnimals / totalInactiveFemaleAnimals : 0;
+            mediumWeightInactiveMaleAnimals = totalInactiveMaleAnimals != 0 ? farmDataReporter.TotalWeightInactiveMaleAnimals / totalInactiveMaleAnimals : 0;
+            mediumWeightActiveAnimals = totalActiveAnimals != 0 ? farmDataReporter.TotalWeightActiveAnimals / totalActiveAnimals : 0;
+            mediumWeightInactiveAnimals = totalInactiveMaleAnimals != 0 ? farmDataReporter.TotalWeightInactiveAnimals / totalInactiveMaleAnimals : 0;
+
+        }
+    }
+
+    void DailyWeightGain(string? clientId = null)
+    {
+
+        if (string.IsNullOrEmpty(clientId))
+        {
+            #region Total Start Weight
+            var totalSartWeightActiveFemaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalStartWeightActiveFemaleAnimals);
+
+            var totalSartWeightActiveMaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalStartWeightActiveMaleAnimals);
+
+            var totalSartWeightInactiveFemaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalStartWeightInactiveFemaleAnimals);
+
+            var totalSartWeightInactiveMaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalStartWeightInactiveMaleAnimals);
+
+            var totalSartWeightActiveAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalStartWeightActiveAnimals);
+
+            var totalSartWeightInactiveAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalStartWeightInactiveAnimals);
+            #endregion
+
+            #region Total Current Weight
+            var totalCurrentWeightActiveFemaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightActiveFemaleAnimals);
+
+            var totalCurrentWeightActiveMaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightActiveMaleAnimals);
+
+            var totalCurrentWeightInactiveFemaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightInactiveFemaleAnimals);
+
+            var totalCurrentWeightInactiveMaleAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightInactiveMaleAnimals);
+
+            var totalCurrentWeightActiveAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightActiveAnimals);
+
+            var totalCurrentWeightInactiveAnimals = globalFarmDataReporter.Clients
+            .Sum(x => x.TotalWeightInactiveAnimals);
+            #endregion
+
+            GPDActiveFemaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalDaysActiveFemaleAnimalsInPhase) != 0
+                ? (totalCurrentWeightActiveFemaleAnimals - totalSartWeightActiveFemaleAnimals) /
+                    globalFarmDataReporter.Clients.Sum(x => x.TotalDaysActiveFemaleAnimalsInPhase)
+                : 0;
+
+            GPDActiveMaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalDaysActiveMaleAnimalsInPhase) != 0
+                ? (totalCurrentWeightActiveMaleAnimals - totalSartWeightActiveMaleAnimals) /
+                    globalFarmDataReporter.Clients.Sum(x => x.TotalDaysActiveMaleAnimalsInPhase)
+                : 0;
+
+            GPDInactiveFemaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalDaysInactiveFemaleAnimalsInPhase) != 0
+                ? (totalCurrentWeightInactiveFemaleAnimals - totalSartWeightInactiveFemaleAnimals) /
+                    globalFarmDataReporter.Clients.Sum(x => x.TotalDaysInactiveFemaleAnimalsInPhase)
+                : 0;
+
+            GPDInactiveMaleAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalDaysInactiveMaleAnimalsInPhase) != 0
+                ? (totalCurrentWeightInactiveMaleAnimals - totalSartWeightInactiveMaleAnimals) /
+                    globalFarmDataReporter.Clients.Sum(x => x.TotalDaysInactiveMaleAnimalsInPhase)
+                : 0;
+
+            GPDActiveAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalDaysActiveAnimalsInPhase) != 0
+                ? (totalCurrentWeightActiveAnimals - totalSartWeightActiveAnimals) /
+                    globalFarmDataReporter.Clients.Sum(x => x.TotalDaysActiveAnimalsInPhase)
+                : 0;
+
+            GPDInactiveAnimals = globalFarmDataReporter.Clients.Sum(x => x.TotalDaysInactiveAnimalsInPhase) != 0
+                ? (totalCurrentWeightInactiveAnimals - totalSartWeightInactiveAnimals) /
+                    globalFarmDataReporter.Clients.Sum(x => x.TotalDaysInactiveAnimalsInPhase)
+                : 0;
+        }
+        else
+        {
+            var farmDataReporter = globalFarmDataReporter.Clients.First(x => x.Id.ToString() == clientId);
+
+            GPDActiveFemaleAnimals = farmDataReporter.TotalDaysActiveFemaleAnimalsInPhase != 0
+                ? (farmDataReporter.TotalWeightActiveFemaleAnimals - farmDataReporter.TotalStartWeightActiveFemaleAnimals) /
+                    farmDataReporter.TotalDaysActiveFemaleAnimalsInPhase
+                : 0;
+
+            GPDActiveMaleAnimals = farmDataReporter.TotalDaysActiveMaleAnimalsInPhase != 0
+                ? (farmDataReporter.TotalWeightActiveMaleAnimals - farmDataReporter.TotalStartWeightActiveMaleAnimals) /
+                    farmDataReporter.TotalDaysActiveMaleAnimalsInPhase
+                : 0;
+
+            GPDInactiveFemaleAnimals = farmDataReporter.TotalDaysInactiveFemaleAnimalsInPhase != 0
+                ? (farmDataReporter.TotalWeightInactiveFemaleAnimals - farmDataReporter.TotalStartWeightInactiveFemaleAnimals) /
+                    farmDataReporter.TotalDaysInactiveFemaleAnimalsInPhase
+                : 0;
+
+            GPDInactiveMaleAnimals = farmDataReporter.TotalDaysInactiveMaleAnimalsInPhase != 0
+                ? (farmDataReporter.TotalWeightInactiveMaleAnimals - farmDataReporter.TotalStartWeightInactiveMaleAnimals) /
+                    farmDataReporter.TotalDaysInactiveMaleAnimalsInPhase
+                : 0;
+
+            GPDActiveAnimals = farmDataReporter.TotalDaysActiveAnimalsInPhase != 0
+                ? (farmDataReporter.TotalWeightActiveAnimals - farmDataReporter.TotalStartWeightActiveAnimals) /
+                    farmDataReporter.TotalDaysActiveAnimalsInPhase
+                : 0;
+
+            GPDInactiveAnimals = farmDataReporter.TotalDaysInactiveAnimalsInPhase != 0
+                ? (farmDataReporter.TotalWeightInactiveAnimals - farmDataReporter.TotalStartWeightInactiveAnimals) /
+                    farmDataReporter.TotalDaysInactiveAnimalsInPhase
+                : 0;
+        }
+    }
+}

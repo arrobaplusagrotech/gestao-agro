@@ -1,0 +1,15 @@
+﻿<Router AppAssembly="typeof(Program).Assembly" AdditionalAssemblies="new[] { typeof(Client._Imports).Assembly }">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="OnDefaultLayout(routeData)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+</Router>
+@code {
+    private Type? OnDefaultLayout(RouteData routeData)
+    {
+        if (routeData.PageType == typeof(Pages.Home))
+            return null;
+        else
+            return typeof(Layout.MainLayout);
+    }
+}

@@ -1,0 +1,105 @@
+/* /Components/InfoCard.razor.rz.scp.css */
+.title[b-2ga2vng516] {
+    font-family: montserrat-light;
+    font-size: 1rem;
+    color: #271447;
+}
+.info-card[b-2ga2vng516] {
+    display: flex;
+    align-items:center;
+    height: 72px;
+    padding: 8px 0;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    border-radius: 8px;
+}
+
+.container-icon[b-2ga2vng516] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 100%;
+    border-right: 2px solid #71247E;
+    padding: 0 18px;
+}
+
+.container-value[b-2ga2vng516] {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: montserrat-semibold;
+}
+/* /Components/SummaryCard.razor.rz.scp.css */
+.title[b-jzxuo75byt] {
+    font-family: montserrat-light;
+    font-size: 1rem;
+    color: #271447;
+}
+
+.card[b-jzxuo75byt] {
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 5px 4px #888888;
+}
+
+.card-body[b-jzxuo75byt] {
+    background-color: transparent;
+    border: none;
+    padding-bottom: 0;
+}
+
+table[b-jzxuo75byt] {
+    margin: 0;
+}
+
+th[b-jzxuo75byt] {
+    color: #271447;
+}
+
+thead[b-jzxuo75byt] {
+    font-family: montserrat-semibold;
+}
+
+thead[b-jzxuo75byt] {
+    border-bottom: 2px solid #72257F;
+}
+
+tr[b-jzxuo75byt] {
+    border-bottom: 1px solid #72257F;
+    color: #271447;
+}
+
+tbody tr:last-child[b-jzxuo75byt] {
+    border: 1px solid #D9D9D9;
+}
+
+tr td:nth-child(2)[b-jzxuo75byt] {
+    font-family: montserrat-semibold;
+}
+
+.info-title[b-jzxuo75byt] {
+    font-size: 1rem;
+    text-align: center;
+}
+/* /Components/TitleLayout.razor.rz.scp.css */
+span[b-u9ujngyi57] {
+    display: inline-block;
+    font-family: montserrat-black;
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #261346;
+}
+.span-traco[b-u9ujngyi57]::after{
+    content: '';
+    display: block;
+    border-bottom: 2px solid #261346;
+    width:150%;
+}
+/* /Pages/ControlPanel.razor.rz.scp.css */
+.form-select-custom[b-5v8xpapxo9] {
+    height: 42px;
+    border: 1px solid #5B1D65;
+    border-radius: 4px;
+}

@@ -1,0 +1,13 @@
+﻿span {
+    display: inline-block;
+    font-family: montserrat-black;
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #261346;
+}
+.span-traco::after{
+    content: '';
+    display: block;
+    border-bottom: 2px solid #261346;
+    width:150%;
+}

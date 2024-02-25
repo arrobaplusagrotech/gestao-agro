@@ -1,0 +1,52 @@
+.title[b-jzxuo75byt] {
+    font-family: montserrat-light;
+    font-size: 1rem;
+    color: #271447;
+}
+
+.card[b-jzxuo75byt] {
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 5px 4px #888888;
+}
+
+.card-body[b-jzxuo75byt] {
+    background-color: transparent;
+    border: none;
+    padding-bottom: 0;
+}
+
+table[b-jzxuo75byt] {
+    margin: 0;
+}
+
+th[b-jzxuo75byt] {
+    color: #271447;
+}
+
+thead[b-jzxuo75byt] {
+    font-family: montserrat-semibold;
+}
+
+thead[b-jzxuo75byt] {
+    border-bottom: 2px solid #72257F;
+}
+
+tr[b-jzxuo75byt] {
+    border-bottom: 1px solid #72257F;
+    color: #271447;
+}
+
+tbody tr:last-child[b-jzxuo75byt] {
+    border: 1px solid #D9D9D9;
+}
+
+tr td:nth-child(2)[b-jzxuo75byt] {
+    font-family: montserrat-semibold;
+}
+
+.info-title[b-jzxuo75byt] {
+    font-size: 1rem;
+    text-align: center;
+}
