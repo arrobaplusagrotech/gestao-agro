@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj": {}
+    "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj": {}
   },
   "projects": {
-    "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj": {
+    "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj",
+        "projectUniqueName": "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj",
         "projectName": "AgroTech.DataAccessLayer",
-        "projectPath": "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj",
+        "projectPath": "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\obj\\",
+        "outputPath": "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AgroTech.Client",
   "resources": {
-    "hash": "sha256-pwM+BwbV05pKZs35my20Zmr+kjUogF3ELtOEWysqq0g=",
+    "hash": "sha256-obzTQIuyN3beYdZJiUCN8uJTgqTCKe8agnRR9vcvplA=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.deknxu92gu.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -242,14 +242,14 @@
       "mscorlib.wasm": "sha256-7Y52cr1rNBOiLBUJ9d2hZpQyDQzQG0drfKrkZtUmOvI=",
       "netstandard.wasm": "sha256-9C1FWv6NuwYHGwTLzN3GJ7bTfxECOcrZu2XgGooRvnk=",
       "System.Private.CoreLib.wasm": "sha256-lOUYWvvvDVN5PHzYLEb2+6kHBXyOXHfIOjiZCZZIwIE=",
-      "AgroTech.BusinessLogicLayer.wasm": "sha256-i/W1XC+xdkzqQg+MzIF6LaJXmtt+qR+/otnfGbbaCf4=",
-      "AgroTech.DataAccessLayer.wasm": "sha256-wSOB9HlX9r0Den0RJpMFda7IMAVeizpytwrV+GVUStc=",
-      "AgroTech.Client.wasm": "sha256-z6LSweZxqOZaNc829QwcxUVkpPAiuZQC0r6IwN/wN9s="
+      "AgroTech.BusinessLogicLayer.wasm": "sha256-LXBPcBA81QKQHjRMDp4FvmoWG5C7kVk3IExoddqJdYU=",
+      "AgroTech.DataAccessLayer.wasm": "sha256-D1xI7ixS8I93AsqmsFu7olOlcDqlC3My+Hkz1E4wU0M=",
+      "AgroTech.Client.wasm": "sha256-G49CIKlBFvZKzlQ8P5+XDOYiFFYvCstW0ATLwvMsXCc="
     },
     "pdb": {
-      "AgroTech.BusinessLogicLayer.pdb": "sha256-C2YysiqF63BtssfS1AuGjefvdqACgo6vjpQzB9FUkDo=",
-      "AgroTech.DataAccessLayer.pdb": "sha256-dqiZH6GGzkR7MbRh5ixF+iqEkAgDcCZECp4W2wR4oGc=",
-      "AgroTech.Client.pdb": "sha256-4uf1ihco6LNueWz69c/Bn1tzD8shkrIgCv0Ozp/D3gI="
+      "AgroTech.BusinessLogicLayer.pdb": "sha256-dO8rHHSNQbJpXzJ8YwKcxCTgM5kRfhroEOCuy/EIdpU=",
+      "AgroTech.DataAccessLayer.pdb": "sha256-vufGV5Mo2vHeI70X8vAbrCvitrj1rx8Bi2qpzCFUJvg=",
+      "AgroTech.Client.pdb": "sha256-w2Zy1sLif8t4IvSpK9SVVP4qiKwokwcPr/Nna5lXoh8="
     }
   },
   "cacheBootResources": true,

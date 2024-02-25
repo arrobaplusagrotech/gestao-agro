@@ -10,3 +10,16 @@ D:\WorkSpace\AgroTech\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAcc
 D:\WorkSpace\AgroTech\AgroTech.DataAccessLayer\obj\Debug\net8.0\refint\AgroTech.DataAccessLayer.dll
 D:\WorkSpace\AgroTech\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.pdb
 D:\WorkSpace\AgroTech\AgroTech.DataAccessLayer\obj\Debug\net8.0\ref\AgroTech.DataAccessLayer.dll
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\bin\Debug\net8.0\AgroTech.DataAccessLayer.deps.json
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\bin\Debug\net8.0\AgroTech.DataAccessLayer.dll
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\bin\Debug\net8.0\AgroTech.DataAccessLayer.pdb
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.csproj.AssemblyReference.cache
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.AssemblyInfoInputs.cache
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.AssemblyInfo.cs
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.sourcelink.json
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.dll
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\refint\AgroTech.DataAccessLayer.dll
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\AgroTech.DataAccessLayer.pdb
+D:\WorkSpace\gestao-agro\AgroTech.DataAccessLayer\obj\Debug\net8.0\ref\AgroTech.DataAccessLayer.dll

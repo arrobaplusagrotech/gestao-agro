@@ -13,35 +13,35 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = AgroTech.Client
 build_property.RootNamespace = AgroTech.Client
-build_property.ProjectDir = D:\WorkSpace\AgroTech\AgroTech\AgroTech.Client\
+build_property.ProjectDir = D:\WorkSpace\gestao-agro\AgroTech\AgroTech.Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\WorkSpace\AgroTech\AgroTech\AgroTech.Client
+build_property.MSBuildProjectDirectory = D:\WorkSpace\gestao-agro\AgroTech\AgroTech.Client
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/WorkSpace/AgroTech/AgroTech/AgroTech.Client/Pages/Counter.razor]
+[D:/WorkSpace/gestao-agro/AgroTech/AgroTech.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/WorkSpace/AgroTech/AgroTech/AgroTech.Client/_Imports.razor]
+[D:/WorkSpace/gestao-agro/AgroTech/AgroTech.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/WorkSpace/AgroTech/AgroTech/AgroTech.Client/Components/InfoCard.razor]
+[D:/WorkSpace/gestao-agro/AgroTech/AgroTech.Client/Components/InfoCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJbmZvQ2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-2ga2vng516
 
-[D:/WorkSpace/AgroTech/AgroTech/AgroTech.Client/Components/SummaryCard.razor]
+[D:/WorkSpace/gestao-agro/AgroTech/AgroTech.Client/Components/SummaryCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdW1tYXJ5Q2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-jzxuo75byt
 
-[D:/WorkSpace/AgroTech/AgroTech/AgroTech.Client/Components/TitleLayout.razor]
+[D:/WorkSpace/gestao-agro/AgroTech/AgroTech.Client/Components/TitleLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUaXRsZUxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-u9ujngyi57
 
-[D:/WorkSpace/AgroTech/AgroTech/AgroTech.Client/Pages/ControlPanel.razor]
+[D:/WorkSpace/gestao-agro/AgroTech/AgroTech.Client/Pages/ControlPanel.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udHJvbFBhbmVsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-5v8xpapxo9

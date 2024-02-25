@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BNP+vU5f75jifCLs2Gb8SZ7p1J7sxF2U328eeKuYEM7SX8CU/ROM1guM6cJ+ifI4nOYFm5I+H6Cq4jRyzhrkWQ==",
+  "dgSpecHash": "V+HEXGol86a9AZoclmrg9lQUFPrFMwXs5Ya8miI1V7Lg7xOjoUn8ek7d0LPPo+/n7tC3rasAHTxFMOMG4AKFpg==",
   "success": true,
-  "projectFilePath": "D:\\WorkSpace\\AgroTech\\AgroTech.BusinessLogicLayer\\AgroTech.BusinessLogicLayer.csproj",
+  "projectFilePath": "D:\\WorkSpace\\gestao-agro\\AgroTech.BusinessLogicLayer\\AgroTech.BusinessLogicLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

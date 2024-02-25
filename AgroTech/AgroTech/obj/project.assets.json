@@ -3825,11 +3825,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\AgroTech.csproj",
+      "projectUniqueName": "D:\\WorkSpace\\gestao-agro\\AgroTech\\AgroTech\\AgroTech.csproj",
       "projectName": "AgroTech",
-      "projectPath": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\AgroTech.csproj",
+      "projectPath": "D:\\WorkSpace\\gestao-agro\\AgroTech\\AgroTech\\AgroTech.csproj",
       "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-      "outputPath": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech\\obj\\",
+      "outputPath": "D:\\WorkSpace\\gestao-agro\\AgroTech\\AgroTech\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3850,14 +3850,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\WorkSpace\\AgroTech\\AgroTech.BusinessLogicLayer\\AgroTech.BusinessLogicLayer.csproj": {
-              "projectPath": "D:\\WorkSpace\\AgroTech\\AgroTech.BusinessLogicLayer\\AgroTech.BusinessLogicLayer.csproj"
+            "D:\\WorkSpace\\gestao-agro\\AgroTech.BusinessLogicLayer\\AgroTech.BusinessLogicLayer.csproj": {
+              "projectPath": "D:\\WorkSpace\\gestao-agro\\AgroTech.BusinessLogicLayer\\AgroTech.BusinessLogicLayer.csproj"
             },
-            "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj": {
-              "projectPath": "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj"
+            "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj": {
+              "projectPath": "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj"
             },
-            "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech.Client\\AgroTech.Client.csproj": {
-              "projectPath": "D:\\WorkSpace\\AgroTech\\AgroTech\\AgroTech.Client\\AgroTech.Client.csproj"
+            "D:\\WorkSpace\\gestao-agro\\AgroTech\\AgroTech.Client\\AgroTech.Client.csproj": {
+              "projectPath": "D:\\WorkSpace\\gestao-agro\\AgroTech\\AgroTech.Client\\AgroTech.Client.csproj"
             }
           }
         }

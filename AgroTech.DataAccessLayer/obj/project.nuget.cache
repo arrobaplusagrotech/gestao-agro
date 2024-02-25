@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iQqXxvze4HGX6w8D0zIZRERp+9jKI9yJV+ZdTlHof8tm3E8MGLV+oE8zNk0UFDjm05rRqIQ9EnKab5EH8XJjPQ==",
+  "dgSpecHash": "gIqWxxmpPuiF59ovJzOxuWhEeXry+xIh8enBo/u0DhazGN6Mgs/3ZEmKhsnjQBf3ezyrCgNs6oE/3nQt0EuPjw==",
   "success": true,
-  "projectFilePath": "D:\\WorkSpace\\AgroTech\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj",
+  "projectFilePath": "D:\\WorkSpace\\gestao-agro\\AgroTech.DataAccessLayer\\AgroTech.DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
